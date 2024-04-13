@@ -6,35 +6,42 @@
 </div>
 <div>
 
-	<form action=" "method="get">
+	<form action="{{route('produto.index')}} "method="get">
 		<input type="text" name="pesquisar" placeholder="Digite o nome">
 		<button>Pesquisar</button>
 		<a type="button" href="" class="btn btn-success float-end">Incluir Produto</a>
 	</form>
 	<div class="table-responsive small">
 
-		 <table class="table table-striped table-sm">
+		@if($findProduto->isEmpty())
 
-		 	<thead>
-	            <tr>
-	              <th >Nome</th>
-	              <th >Valor</th>
-	              <th >Ações</th>	              
-	            </tr>
-	        </thead>
-	        <tbody>
-	        	@foreach($findProduto as $produto)
-	            <tr>
-	              <td>{{ $produto->nome }}</td>
-	              <td>{{ 'R$' . ' ' . number_format($produto->valor, 2, ',', '.') }}</td>
-	              <td>
-	              	<a type="button" href="" class="btn btn-light btn-sm">Editar</a>
-	              	<a type="button" href="" class="btn btn-danger btn-sm">Excluir</a>
-	              </td>          
-	            </tr>
-	            @endforeach
-		    </tbody>
-		 </table>
+		  <p>Não existe dados para o valor pesquisado</p>
+
+		@else
+			<table class="table table-striped table-sm">
+
+			 	<thead>
+		            <tr>
+		              <th >Nome</th>
+		              <th >Valor</th>
+		              <th >Ações</th>	              
+		            </tr>
+		        </thead>0
+		        <tbody>
+		        	@foreach($findProduto as $produto)
+		            <tr>
+		              <td>{{ $produto->nome }}</td>
+		              <td>{{ 'R$' . ' ' . number_format($produto->valor, 2, ',', '.') }}</td>
+		              <td>
+		              	<a type="button" href="" class="btn btn-light btn-sm">Editar</a>
+		              	<a type="button" href="{{route('produto.delete')}}" class="btn btn-danger btn-sm">Excluir</a>
+		              </td>          
+		            </tr>
+		            @endforeach
+			    </tbody>
+			 </table>
+
+		@endif	 
 		
 	</div>
 	
