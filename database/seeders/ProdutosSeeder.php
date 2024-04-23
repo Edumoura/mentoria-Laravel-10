@@ -17,7 +17,8 @@ class ProdutosSeeder extends Seeder
 
         	[
         		'nome'  => 'Eduardo Moura',
-        		'valor' => '20.00'
+        		'valor' => '20.00',
+
         	]     	
         );
     }
