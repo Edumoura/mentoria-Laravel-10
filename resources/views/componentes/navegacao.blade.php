@@ -36,12 +36,12 @@
                 Dashboard
               </a>
             </li>
-            <li class="nav-item">
+           <!--  <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#file-earmark"/></svg>
                 Orders
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="{{route('produto.index')}}">
                 <svg class="bi"><use xlink:href="#cart"/></svg>
@@ -51,21 +51,22 @@
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#people"/></svg>
-                Customers
+                Clientes
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#graph-up"/></svg>
-                Reports
+              <a class="nav-link d-flex align-items-center gap-2" href="{{ route('usuario.index') }}">
+                <!-- <svg class="bi"><use xlink:href="#graph-up"/></svg> -->
+                <svg class="bi"><use xlink:href="#people"/></svg>
+                Usuário
               </a>
             </li>
-            <li class="nav-item">
+           <!--  <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#puzzle"/></svg>
                 Integrations
               </a>
-            </li>
+            </li> -->
           </ul>
 
          <!--  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
